@@ -409,6 +409,8 @@ typedef struct Gui
     char_u	*browse_fname;	    // file name from filedlg
 
     guint32	event_time;
+
+    char_u ligatures_map[128];	    // ascii map 0-127, ligature char or not
 #endif	// FEAT_GUI_GTK
 
 #if defined(FEAT_GUI_TABLINE) \
