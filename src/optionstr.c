@@ -1558,11 +1558,13 @@ ambw_end:
 	    errmsg = N_("E534: Invalid wide font");
 	redraw_gui_only = TRUE;
     }
+# if defined(FEAT_GUI_GTK)
     else if (varp == &p_guiligatures)
     {
 	gui_set_ligatures();
 	redraw_gui_only = TRUE;
     }
+# endif
 #endif
 
 #ifdef CURSOR_SHAPE

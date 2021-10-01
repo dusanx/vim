@@ -1069,7 +1069,7 @@ gui_get_wide_font(void)
     return OK;
 }
 
-# ifdef FEAT_GUI_GTK
+#ifdef FEAT_GUI_GTK
 /*
  * Set list of ascii characters that combined can create ligature.
  * Store them in 128 char map for quick access from gui_gtk2_draw_string.
@@ -1089,7 +1089,7 @@ gui_set_ligatures(void)
 	}
     }
 }
-#endif
+#endif // FEAT_GUI_GTK
 
     static void
 gui_set_cursor(int row, int col)
